@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Stock Market Capitalization</title>
+        <link rel="stylesheet" href="{{ url_for('templates', filename='css/main.css')}}"
+    </head>
+    <body>
+        <img src="https://www.kindpng.com/picc/m/78-788160_transparent-stock-market-icon-png-png-download.png">
+        <br>
+        <form action="show" method="post">
+            {% for message in get_flashed_messages()%}
+                <p> {{message}} </p>
+            {% endfor %}
+            <br>
+            <input type="text" name="name_input">
+            <br>
+            <input type="submit" value="SHOW" id="show">
+        </form>
+    </body>
+</html>
