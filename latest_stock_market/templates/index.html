@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Market Capitalization</title>
+    <link rel="stylesheet" href="{{ 
+    url_for('static', filename='formatmain.css')}}"
+    type="text/css">
+</head>
+<body>
+    <img src="https://lh3.googleusercontent.com/71F8GT1ZnyEDy2W0vcWApAjRdVhXU9Qkg8-BAGQLWnvvWFu98OdwfdEDn2jCg0iumbzXZUS6U5ke-PTy-9eUc7mrbeEJh4pBioBCOm5VrVQYgtvm0mjMZjGBTOQRBBtVhW7bEEqfOUx1Dy6kgnTEDpehdMndiKTGN3-3TMbRfhfcaP37DMwU8PuLmCQRQKj6zV2Ok9xfB5_e0gfQt6VeUUSTu4kAgLaYP5LZhdcRh65_zV2TB4Fp5yH4UHFhBZPPZ9XUlevDvCVVS5dvgyEQnzqz8Xcb4QbE-AV_uOAtZiG2MIw8kli-M8Ul-jst9YuOvWOiPitPVVZk97W2IGaXOzT9AppHuNfvwl-bKCGsHFJgWCorVpgAlmXFOmMQWXPLPjLb6uayFNswr1-xvG3_DSJwnFOjbIGqHOOcm3ORYI9cESMKTGy9iQoOQ2UAzSy_1lR2w66GOot2nBBuL6tc4r9oNwRXOODO0lHayLtUqc7psunNBNLuZzPMxaoGizmArXtmGBNl0IAAAgMzPs0ey6d-dqGIBhCKRorQR1hj9_8XGJGKuKeVbWvftQUG_RmF4mwJuXw9U7x97ODPAQ9Js0bxosk-zDTfOZ7kVTOz3tDO_R9IynreKV5bgIUAUIOsAiDSJh7n8y97oW7ANUi4XwpC0j63WdXxSpFZP871Fwmt_v03f4-SCEayjObkbpNzypuySIryrg1tXHOuH6Ng7g-Gk1hJ3S54AfnJuqMwEqVwACGTLi9yBEMbktuZqFli8aS_cPsYSA7CeMSkw3lwXwaIcBZ08rayHQ=s914-no?authuser=0">
+    <br>
+    <form action="show" method="post">
+        {% for message in get_flashed_messages() %}
+            <p>{{message}}</p>
+        {% endfor %}
+        <br>
+        <input type="text" name="name_input">
+        <br>
+        <input type="submit" value="SHOW" id="show">
+    </form>
+</body>
+</html>
