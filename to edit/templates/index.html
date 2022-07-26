@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Market Capitalization</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='formatmain.css') }}">
+</head>
+<body>
+    <img src="https://lh3.googleusercontent.com/pw/AM-JKLX9BOK8taiWXIk9Esty8OzbxhESuIg8mqlpkLgKrLYBqiDmkiIQvjIjP1jf_kLPTZqvvC0WKtpaLIM5M5R4TzokWVndJ2ARrw-Sf0xzkL9HNnyzl6XFsZltgcZPlLNI3SNzf6uIQ0ee9fPnOgwBgydK=s914-no?authuser=0">
+    <br>
+    <form action="show" method="post">
+        {% for message in get_flashed_messages() %}
+            <p>{{message}}</p>
+        {% endfor %}
+        <br>
+        <input type="text" name="name_input" id="text">
+        <br>
+        <input type="submit" value="SHOW" id="show">
+    </form>
+</body>
+</html>
