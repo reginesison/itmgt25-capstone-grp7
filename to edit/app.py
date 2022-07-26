@@ -33,6 +33,9 @@ def show():
     for item in finalList:
         if item[0] == country: 
             answer_item = str((item[0] + "'s stock market value is at $" + item[1] + " in 2020 and is in rank #" + item[2] + "."))
+            break
         else: 
             answer_item = "No data on country."
+
     return render_template("index.html",answer=answer_item)
+    
